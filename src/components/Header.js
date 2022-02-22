@@ -9,7 +9,7 @@ const Header = ({
   handleSelect,
 }) => {
   return (
-    <header className=' lg:flex lg:justify-around lg:items-start flex flex-col items-center justify-center gap-10 p-4 mt-20'>
+    <header className=' lg:flex lg:justify-around lg:items-start lg:flex-row  flex-col items-center justify-center gap-10 p-4 mt-20'>
       <div className='flex flex-col items-center justify-center lg:justify-end lg:items-end gap-2 '>
         <h1 className='main-title text-6xl text-gray-900 '>devox notes</h1>
         <button
