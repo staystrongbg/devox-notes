@@ -16,7 +16,7 @@ const Note = ({
   return (
     <div
       onClick={() => setIsActive(note.id)}
-      className='flex flex-col w-fit  items-start justify-start shadow-custom rounded-lg '
+      className='flex flex-col lg:w-fit w-screen max-w-screen-sm  items-start justify-start shadow-custom rounded-lg '
       // style={{ transform: isActive === note.id && 'scale(1.25)' }}
     >
       <header
@@ -69,7 +69,7 @@ const Note = ({
         children={note.text}
         // remarkPlugins={[remarkGfm]}
         // rehypePlugins={[rehypeRaw]}
-        className={`p-4 border-2 border-t-0 border-b-0 border-slate-600 m-0 bg-slate-900 text-gray-50 max-w-screen-sm  min-w-[300px] min-h-[300px] `}
+        className={`p-4 border-2 border-t-0 border-b-0 border-slate-600 m-0 bg-slate-900 text-gray-50 w-full  min-w-[300px] min-h-[300px] `}
       />
       <div className='flex gap-2 p-1 items-center bg-slate-900 w-full justify-center rounded-b-lg border-2 border-t-0 border-slate-600 flex-wrap'>
         {note &&
