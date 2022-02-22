@@ -240,7 +240,7 @@ function App() {
           handleSearch={handleSearch}
         />
         {/* header end*/}
-        <section className='w-screen min-h-screen overflow-x-hidden p-24'>
+        <section className='w-screen min-h-screen overflow-x-hidden lg:p-24 p-4'>
           {!user && <Nouser />}
           {user && newResult.length && (
             <TagList
