@@ -28,7 +28,7 @@ const Header = ({
         </button>
       </div>
       {user && (
-        <div className='flex  w-fit gap-12 bg-slate-600/50 rounded-lg p-4'>
+        <div className='flex  w-fit lg:gap-12 gap-4 bg-slate-600/50  rounded-lg p-4'>
           <div>
             <Search handleSearch={handleSearch} />
             {user && newResult && (

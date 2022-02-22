@@ -17,7 +17,7 @@ export const Search = ({ handleSearch }) => {
       <input
         type='text'
         placeholder='term...'
-        className=' p-2 outline-none h-10 rounded-full transition-all'
+        className=' p-2 outline-none h-10 w-full rounded-full transition-all'
         onChange={handleSearch}
       />
     </div>
