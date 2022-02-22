@@ -9,8 +9,8 @@ const Header = ({
   handleSelect,
 }) => {
   return (
-    <header className='flex justify-around items-start p-4 mt-20'>
-      <div className='flex flex-col justify-end items-end gap-2 '>
+    <header className=' lg:flex lg:justify-around lg:items-start flex flex-col items-center justify-center gap-10 p-4 mt-20'>
+      <div className='flex flex-col items-center justify-center lg:justify-end lg:items-end gap-2 '>
         <h1 className='main-title text-6xl text-gray-900 '>devox notes</h1>
         <button
           title='Add new note'
@@ -28,7 +28,7 @@ const Header = ({
         </button>
       </div>
       {user && (
-        <div className='flex gap-12 bg-slate-600/50 rounded-lg p-4'>
+        <div className='flex  w-fit gap-12 bg-slate-600/50 rounded-lg p-4'>
           <div>
             <Search handleSearch={handleSearch} />
             {user && newResult && (
