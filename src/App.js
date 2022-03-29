@@ -144,26 +144,13 @@ function App() {
       .then(() => prikaziObavestenje(true, 'note je izmenjen!'));
   };
 
-  //search for term
-  // const handleSearch = (e) => {
-  //   setSearchTerm(e.target.value);
-  //   console.log(searchTerm);
-  //   filterNotes();
-  // };
-
   useEffect(() => {
     setResult(() =>
       notes.filter((note) =>
         note.text.toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
-
   }, [searchTerm]);
-  // const filterNotes = () => {
-  //   if (searchTerm !== '') {
-
-  //   }
-  // };
 
   const searchForTag = (e) => {
     setResetActive(true);
@@ -218,6 +205,7 @@ function App() {
   const images = [
     './pexels-fwstudio-172277.jpg',
     './programiranje.jpg',
+    './pexels-negative-space-34153.jpg',
     'gnome.jpg',
     'stepin.jpg',
     '',

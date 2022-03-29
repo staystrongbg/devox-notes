@@ -1,6 +1,6 @@
 export const Search = ({ setSearchTerm }) => {
   return (
-    <div className='flex items-center gap-2 bg-gray-50 rounded-md '>
+    <div className='flex items-center gap-2 bg-gray-50 rounded-md '>  
       <span className='p-2 rounded-l-md bg-gray-400 h-15 w-15'>
         <svg
           xmlns='http://www.w3.org/2000/svg'

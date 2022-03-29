@@ -1,10 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 body {
-  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   background: radial-gradient(
     at top left,
     rgba(146, 43, 225, 1) 0%,
@@ -16,8 +15,7 @@ body {
   box-sizing: border-box;
 } */
 code {
-  font-family: Operator Mono Book, source-code-pro, Menlo, Monaco, Consolas,
-    'Courier New', monospace;
+  font-family: 'Source Code Pro';
   color: #87819e;
   font-size: 14px;
 }
@@ -26,6 +24,7 @@ h1,
 h2,
 h3 {
   color: #ae81ff;
+  font-family: 'Inter';
 }
 
 h1 {
@@ -48,5 +47,9 @@ button:disabled {
 
 .main-title {
   color: transparent;
-  text-shadow: 1px 2px 2px #343434, 0 0 0 #101010;
+  text-shadow: 1px 1px 1px #f3f4f5, 0 0 0 #121212;
+}
+
+.tags {
+  font-family: 'Hack';
 }

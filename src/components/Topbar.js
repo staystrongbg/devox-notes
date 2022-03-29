@@ -19,7 +19,7 @@ const Topbar = ({ setIsAuth, user }) => {
     });
   };
   return (
-    <div className='w-full bg-[#011627]/90 p-2 text-gray-50 fixed z-50  flex items-center justify-end'>
+    <div className='w-full bg-[#101010]/90 p-2 text-gray-50 fixed z-50  flex items-center justify-end'>
       {user ? (
         <div className='flex justify-center gap-4 items-center'>
           <div className='flex flex-col justify-center items-end gap-2'>
