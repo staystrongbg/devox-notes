@@ -250,7 +250,7 @@ function App() {
             />
           )}
 
-          <div className='relative px-2 flex justify-center items-start flex-wrap gap-8   '>
+          <div className='relative flex justify-center items-start flex-wrap gap-8  '>
             {user &&
               newResult.map((note, idx) => (
                 <div key={idx}>
