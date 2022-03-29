@@ -17,7 +17,7 @@ export const Search = ({ setSearchTerm }) => {
       <input
         type='text'
         placeholder='term...'
-        className=' search-input p-2 outline-none h-10 w-full transition-all bg-transparent '
+        className=' search-input p-2 outline-none h-10 w-full transition-all bg-transparent text-gray-50 text-base'
         onChange={(e) => setSearchTerm(e.target.value)}
       />
     </div>
@@ -28,7 +28,7 @@ export const SelectCategory = ({ handleSelect }) => {
   return (
     <div>
       <select
-        className=' p-2 text-gray-500 bg-transparent border border-gray-500 focus:outline-none h-10 rounded-md  transition-all'
+        className=' p-2 text-gray-500 bg-transparent border border-gray-500 focus:outline-none h-10 rounded-md  transition-all text-base'
         name='izaberi_kategoriju'
         id='izaberi-kategoriju'
         onChange={handleSelect}
