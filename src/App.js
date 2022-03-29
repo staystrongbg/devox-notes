@@ -224,7 +224,7 @@ function App() {
   return (
     <>
       <div
-        className={` px-2 w-full min-h-screen bg-gray-900  bg-cover bg-fixed overflow-x-hidden flex flex-col justify-between items-stretch `}
+        className={`  w-full min-h-screen bg-gray-900  bg-cover bg-fixed overflow-x-hidden flex flex-col justify-between items-stretch `}
         // style={{ backgroundImage: `url(${bg})`, backgroundPosition: 'center' }}
       >
         {obavestenje && <Obavestenje obavestenje={obavestenje} />}
@@ -250,7 +250,7 @@ function App() {
             />
           )}
 
-          <div className='relative  flex justify-center items-start flex-wrap gap-8   '>
+          <div className='relative px-2 flex justify-center items-start flex-wrap gap-8   '>
             {user &&
               newResult.map((note, idx) => (
                 <div key={idx}>
