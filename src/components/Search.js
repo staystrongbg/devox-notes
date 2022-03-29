@@ -1,4 +1,4 @@
-export const Search = ({ handleSearch }) => {
+export const Search = ({ setSearchTerm }) => {
   return (
     <div className='flex items-center gap-2 bg-gray-50 rounded-md '>
       <span className='p-2 rounded-l-md bg-gray-400 h-15 w-15'>
@@ -18,7 +18,7 @@ export const Search = ({ handleSearch }) => {
         type='text'
         placeholder='term...'
         className=' p-2 outline-none h-10 w-full rounded-full transition-all'
-        onChange={handleSearch}
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
     </div>
   );

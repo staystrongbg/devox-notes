@@ -145,18 +145,25 @@ function App() {
   };
 
   //search for term
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-    filterNotes();
-  };
+  // const handleSearch = (e) => {
+  //   setSearchTerm(e.target.value);
+  //   console.log(searchTerm);
+  //   filterNotes();
+  // };
 
-  const filterNotes = () => {
+  useEffect(() => {
     setResult(() =>
       notes.filter((note) =>
         note.text.toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
-  };
+    console.log(searchTerm);
+  }, [searchTerm]);
+  // const filterNotes = () => {
+  //   if (searchTerm !== '') {
+
+  //   }
+  // };
 
   const searchForTag = (e) => {
     setResetActive(true);
@@ -241,7 +248,7 @@ function App() {
           newResult={newResult}
           setIsAddNote={setIsAddNote}
           handleSelect={handleSelect}
-          handleSearch={handleSearch}
+          setSearchTerm={setSearchTerm}
         />
         {/* header end*/}
         <section className='w-screen min-h-screen overflow-x-hidden lg:p-24 p-4'>
@@ -281,7 +288,7 @@ function App() {
               setIsAddNote={setIsAddNote}
               note={note}
               handleChange={handleChange}
-              handleSearch={handleSearch}
+              // handleSearch={handleSearch}
               setTags={setTags}
             />
           )}

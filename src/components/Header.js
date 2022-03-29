@@ -5,7 +5,7 @@ const Header = ({
   user,
   newResult,
   setIsAddNote,
-  handleSearch,
+  setSearchTerm,
   handleSelect,
 }) => {
   return (
@@ -30,7 +30,7 @@ const Header = ({
       {user && (
         <div className='flex  w-fit lg:gap-12 gap-4 bg-slate-600/50  rounded-lg p-4 mt-10 lg:mt-0'>
           <div>
-            <Search handleSearch={handleSearch} />
+            <Search setSearchTerm={setSearchTerm} />
             {user && newResult && (
               <span className=''>{newResult.length} note(s)</span>
             )}
