@@ -15,7 +15,7 @@ const Header = ({
         <button
           title='Add new note'
           disabled={!user && true}
-          className={`  btn-new border-2 border-green-900 hover:shadow-lg px-2 py-2 rounded-md text-green-500  font-medium  transition-all flex items-center justify-center gap-2 z-40 `}
+          className={`  btn-new bg-green-900 hover:shadow-lg px-2 py-2 rounded-md text-gray-50  font-medium  transition-all flex items-center justify-center gap-2 z-40 `}
           style={{
             left: isScrolled && '40px',
             transform: isScrolled && 'translateY(40px)',

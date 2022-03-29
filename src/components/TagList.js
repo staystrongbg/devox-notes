@@ -11,12 +11,12 @@ const TagList = ({ tagList, searchForTag, resetActive, reset }) => {
   ].slice(1);
 
   return (
-    <div className='tags flex gap-2 p-1 mb-5 items-center w-full justify-center flex-wrap '>
+    <div className='tags flex gap-2 p-1 mb-5 items-center w-full justify-center flex-wrap  '>
       {/* !resetActive && */}
       {tags.map((tag, idx) => (
         <span
           onClick={searchForTag}
-          className='bg-transparent border border-gray-700 text-gray-100 text-sm p-1 rounded-sm cursor-pointer'
+          className='bg-transparent border border-gray-700 text-gray-100  p-1 rounded-sm cursor-pointer md:text-sm text-xs'
           key={idx}
         >
           {tag}

@@ -23,7 +23,7 @@ const Note = ({
   return (
     <div
       onClick={() => setIsActive(note.id)}
-      className=' note flex flex-col lg:w-fit w-screen max-w-screen-sm  items-start justify-start rounded-lg '
+      className=' note flex flex-col items-start justify-start rounded-md  '
       // style={{ transform: isActive === note.id && 'scale(1.25)' }}
     >
       <header
@@ -75,9 +75,9 @@ const Note = ({
 
       <div
         dangerouslySetInnerHTML={createMarkup(marked(note.text))}
-        className={`p-4 border border-t-0 border-b-0 border-slate-600 m-0 bg-gray-900 text-gray-50 w-full  min-w-[300px] min-h-[300px] `}
+        className={`py-4 px-2 border border-t-0 border-b-0 border-slate-600 m-0 bg-gray-900 text-gray-50 w-full  min-w-[260px] min-h-[260px]   `}
       ></div>
-      <div className='flex gap-2 p-1 items-center bg-gray-900 w-full justify-center rounded-b-lg border border-t-0 border-slate-600 flex-wrap'>
+      <div className='flex gap-2 p-1 items-center bg-gray-900 w-full justify-center rounded-b-lg border border-t-0 border-slate-600 flex-wrap '>
         {note &&
           note.tags &&
           note.tags.split(',').map((tag, idx) => (

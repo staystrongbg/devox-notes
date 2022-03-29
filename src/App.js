@@ -239,7 +239,7 @@ function App() {
           setSearchTerm={setSearchTerm}
         />
         {/* header end*/}
-        <section className='w-screen min-h-screen overflow-x-hidden lg:p-24 p-4'>
+        <section className='min-h-screen lg:p-24 p-4'>
           {!user && <Nouser />}
           {user && newResult.length && (
             <TagList
@@ -250,7 +250,7 @@ function App() {
             />
           )}
 
-          <div className='relative flex justify-center items-start flex-wrap gap-8  '>
+          <div className='relative flex justify-center items-center flex-wrap gap-4 md:px-4 m-auto px-2 '>
             {user &&
               newResult.map((note, idx) => (
                 <div key={idx}>
