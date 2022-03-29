@@ -32,17 +32,16 @@ import TagList from './components/TagList';
 function App() {
   const [isAddNote, setIsAddNote] = useState(false);
   const [obavestenje, setObavestenje] = useState({ show: false, type: '' });
-  const [notes, setNotes] = useState([]);
   const [editNote, setEditNote] = useState(null);
   const [editedNote, setEditedNote] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectByDate, setSelectByDate] = useState(null);
+  const [selectByDate, setSelectByDate] = useState('');
   const [result, setResult] = useState([]);
-  const [searchTag, setSearchTag] = useState('');
   const [isActive, setIsActive] = useState(null);
   const [isAuth, setIsAuth] = useState(false);
   const [user] = useAuthState(auth);
   const [resetActive, setResetActive] = useState(false);
+  const [notes, setNotes] = useState([]);
   const [notesCollection, setNotesCollection] = useState(
     collection(db, 'notes')
   );
@@ -153,7 +152,9 @@ function App() {
 
   const filterNotes = () => {
     setResult(() =>
-      notes.filter((note) => note.text.toLowerCase().includes(searchTerm))
+      notes.filter((note) =>
+        note.text.toLowerCase().includes(searchTerm.toLowerCase())
+      )
     );
   };
 
@@ -169,17 +170,20 @@ function App() {
   const handleSelect = (e) => {
     setSelectByDate(e.target.value);
 
+    return () => window.removeEventListener;
+  };
+
+  useEffect(() => {
     setResult(
       selectByDate === 'najnovije'
         ? notes
             .filter((note) => note.timestamp)
-            .sort((a, b) => a.timestamp - b.timestamp)
+            .sort((a, b) => b.timestamp - a.timestamp)
         : notes
             .filter((note) => note.timestamp)
-            .sort((a, b) => b.timestamp - a.timestamp)
+            .sort((a, b) => a.timestamp - b.timestamp)
     );
-    return () => window.removeEventListener;
-  };
+  }, [selectByDate]);
 
   const reset = () => {
     setResetActive(false);
@@ -262,7 +266,6 @@ function App() {
                     format={format}
                     remove={remove}
                     isEditing={isEditing}
-                    // tagList={tagList}
                   />
                 </div>
               ))}

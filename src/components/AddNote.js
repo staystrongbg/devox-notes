@@ -13,7 +13,7 @@ const AddNote = ({
         add new note
         <span className='flex items-center justify-center gap-6'>
           <button
-            className='w-16 bg-blue-900 rounded-sm'
+            className='w-16 bg-blue-900 rounded-md'
             onClick={addNoteToFirebase}
             title='Add note'
             disabled={!note || false}

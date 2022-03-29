@@ -1,7 +1,10 @@
 import { FaPenSquare, FaCopy, FaTrashAlt } from 'react-icons/fa';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import remarkGfm from 'remark-gfm';
+import { marked } from 'marked';
+import { useEffect, useState } from 'react';
+// import ReactMarkdown from 'react-markdown';
+// import rehypeRaw from 'rehype-raw';
+// import remarkGfm from 'remark-gfm';
+
 const Note = ({
   setIsActive,
   isActive,
@@ -13,6 +16,10 @@ const Note = ({
 }) => {
   // note && note.tags && console.log(note.tags);
 
+  function createMarkup(text) {
+    return { __html: `${text}` };
+  }
+
   return (
     <div
       onClick={() => setIsActive(note.id)}
@@ -20,7 +27,7 @@ const Note = ({
       // style={{ transform: isActive === note.id && 'scale(1.25)' }}
     >
       <header
-        className={`w-full h-18 m-0 px-2 py- bg-slate-600 flex justify-between items-center rounded-t-md`}
+        className={`w-full h-18 m-0 px-2 bg-slate-600 flex justify-between items-center rounded-t-md`}
         style={
           {
             // backgroundColor: `${colorsArr[idx].hexString}`,
@@ -30,6 +37,7 @@ const Note = ({
             //     ? '#000'
             //     : '#fff'
             // }`,
+            // backgroundColor: `#${c}`,
           }
         }
       >
@@ -65,12 +73,10 @@ const Note = ({
       </header>
       {/* header end*/}
 
-      <ReactMarkdown
-        children={note.text}
-        // remarkPlugins={[remarkGfm]}
-        // rehypePlugins={[rehypeRaw]}
+      <div
+        dangerouslySetInnerHTML={createMarkup(marked(note.text))}
         className={`p-4 border-2 border-t-0 border-b-0 border-slate-600 m-0 bg-slate-900 text-gray-50 w-full  min-w-[300px] min-h-[300px] `}
-      />
+      ></div>
       <div className='flex gap-2 p-1 items-center bg-slate-900 w-full justify-center rounded-b-lg border-2 border-t-0 border-slate-600 flex-wrap'>
         {note &&
           note.tags &&

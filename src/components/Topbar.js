@@ -25,7 +25,7 @@ const Topbar = ({ setIsAuth, user }) => {
           <div className='flex flex-col justify-center items-end gap-2'>
             <span className='text-sm'>{user.email}</span>
             <button
-              className='ml-2 bg-green-900 rounded-md p-1 text-xs text-gray-50 '
+              className='ml-2 bg-green-900 rounded-md p-1 text-xs text-gray-50 font-bold tracking-wide '
               onClick={signUserOut}
             >
               Logout
