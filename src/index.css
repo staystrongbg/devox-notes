@@ -1,21 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Share+Tech+Mono&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
-  background: radial-gradient(
-    at top left,
-    rgba(146, 43, 225, 1) 0%,
-    rgba(43, 9, 107, 1) 100%
-  );
-  background-repeat: no-repeat;
+  font-family: 'Inter';
 }
-/* * {
-  box-sizing: border-box;
-} */
+
 code {
-  font-family: 'Source Code Pro';
+  font-family: 'Share Tech Mono';
   color: #87819e;
   word-break: break-all;
   width: 100%;
@@ -40,6 +34,7 @@ li {
   }
   md: text-base text-sm;
 }
+
 @media (min-width: 1136px) {
   p,
   li {
@@ -58,19 +53,18 @@ li {
     font-weight: bold;
   }
   code {
-    font-size: 14px;
+    font-size: 16px;
   }
-}
-pre {
-  word-break: break-all;
-  width: 100%;
 }
 
 h1,
 h2,
 h3 {
   color: #ae81ff;
-  font-family: 'Inter';
+  background-color: #121212;
+  text-align: left;
+  display: inline-flex;
+  padding: 5px 10px;
 }
 
 button:disabled {
@@ -79,15 +73,22 @@ button:disabled {
 }
 
 .main-title {
-  color: transparent;
-  font-family: 'Source Code Pro';
-  text-shadow: 1px 1px 1px #f3f4f5, 0 0 0 #121212;
+  /* color: rgb(30 58 138); */
+  font-family: 'Share Tech Mono';
+
+  /* text-shadow: 2px 2px 4px #d3e4f5, 2px 2px 2px #e3d4e5; */
 }
 
 .tags {
-  font-family: 'Source Code Pro';
+  font-family: 'Share Tech Mono';
+  padding: 40px;
+  border-bottom: 1px dashed #87819e;
+}
+
+.tags-in-note {
+  font-family: 'Share Tech Mono';
 }
 
 .search-input {
-  font-family: 'Source Code Pro';
+  font-family: 'Share Tech Mono';
 }

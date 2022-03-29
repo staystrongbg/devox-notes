@@ -24,10 +24,9 @@ const Note = ({
     <div
       onClick={() => setIsActive(note.id)}
       className=' note flex flex-col items-start justify-start rounded-md  '
-      // style={{ transform: isActive === note.id && 'scale(1.25)' }}
     >
       <header
-        className={`w-full h-18 m-0 px-2 bg-blue-900 flex justify-between items-center rounded-t-md`}
+        className={`w-full h-18 m-0 px-2 bg-blue-900 flex justify-between items-center rounded-t-md `}
         style={
           {
             // backgroundColor: `${colorsArr[idx].hexString}`,
@@ -75,15 +74,21 @@ const Note = ({
 
       <div
         dangerouslySetInnerHTML={createMarkup(marked(note.text))}
-        className={`py-4 px-2 border border-t-0 border-b-0 border-slate-600 m-0 bg-gray-900 text-gray-50 w-full  min-w-[260px] min-h-[260px]   `}
+        className={`py-4 px-2 border border-t-0 border-b-0 border-blue-900 m-0 bg-gray-900 text-gray-50 w-full  min-w-[260px] min-h-[260px] ${
+          isActive === note.id ? 'bg-gray-800' : ''
+        }  `}
       ></div>
-      <div className='flex gap-2 p-1 items-center bg-gray-900 w-full justify-center rounded-b-lg border border-t-0 border-slate-600 flex-wrap '>
+      <div
+        className={`flex gap-2 p-1 items-center bg-gray-900 w-full justify-center rounded-b-lg border border-t-0 border-blue-900 flex-wrap ${
+          isActive === note.id ? 'bg-gray-800' : ''
+        }  `}
+      >
         {note &&
           note.tags &&
           note.tags.split(',').map((tag, idx) => (
             <span
               key={idx}
-              className='bg-transparent text-gray-700 text-sm p-1 rounded-lg'
+              className='tags-in-note bg-transparent text-gray-700 text-sm p-1 rounded-lg'
             >
               {tag}
             </span>
