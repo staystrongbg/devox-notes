@@ -47,9 +47,14 @@ button:disabled {
 
 .main-title {
   color: transparent;
+  font-family: 'Source Code Pro';
   text-shadow: 1px 1px 1px #f3f4f5, 0 0 0 #121212;
 }
 
 .tags {
   font-family: 'Hack';
+}
+
+.search-input {
+  font-family: 'Source Code Pro';
 }

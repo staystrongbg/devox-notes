@@ -16,7 +16,7 @@ const TagList = ({ tagList, searchForTag, resetActive, reset }) => {
       {tags.map((tag, idx) => (
         <span
           onClick={searchForTag}
-          className='bg-green-800 text-gray-100 text-sm p-1 rounded-sm cursor-pointer'
+          className='bg-transparent border border-gray-700 text-gray-100 text-sm p-1 rounded-sm cursor-pointer'
           key={idx}
         >
           {tag}

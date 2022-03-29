@@ -15,7 +15,7 @@ const Header = ({
         <button
           title='Add new note'
           disabled={!user && true}
-          className={`  btn-new bg-gray-900 hover:shadow-lg px-2 py-2 rounded-md text-gray-50  font-medium  transition-all flex items-center justify-center gap-2 z-40 `}
+          className={`  btn-new border-2 border-green-900 hover:shadow-lg px-2 py-2 rounded-md text-green-500  font-medium  transition-all flex items-center justify-center gap-2 z-40 `}
           style={{
             left: isScrolled && '40px',
             transform: isScrolled && 'translateY(40px)',
@@ -28,11 +28,11 @@ const Header = ({
         </button>
       </div>
       {user && (
-        <div className='flex  w-fit lg:gap-12 gap-4 bg-slate-600/50  rounded-lg p-4 mt-10 lg:mt-0'>
+        <div className='flex  w-fit lg:gap-12 gap-4 bg-transparent  rounded-lg p-4 mt-10 lg:mt-0'>
           <div>
             <Search setSearchTerm={setSearchTerm} />
             {user && newResult && (
-              <span className=''>{newResult.length} note(s)</span>
+              <span className='text-gray-100'>{newResult.length} note(s)</span>
             )}
           </div>
           <SelectCategory handleSelect={handleSelect} />

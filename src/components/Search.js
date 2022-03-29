@@ -1,7 +1,7 @@
 export const Search = ({ setSearchTerm }) => {
   return (
-    <div className='flex items-center gap-2 bg-gray-50 rounded-md '>  
-      <span className='p-2 rounded-l-md bg-gray-400 h-15 w-15'>
+    <div className='flex items-center bg-transparent rounded-md border border-gray-500'>
+      <span className='p-2 rounded-l-md bg-gray-700  h-15 w-15'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'
@@ -17,7 +17,7 @@ export const Search = ({ setSearchTerm }) => {
       <input
         type='text'
         placeholder='term...'
-        className=' p-2 outline-none h-10 w-full rounded-full transition-all'
+        className=' search-input p-2 outline-none h-10 w-full transition-all bg-transparent '
         onChange={(e) => setSearchTerm(e.target.value)}
       />
     </div>
@@ -28,7 +28,7 @@ export const SelectCategory = ({ handleSelect }) => {
   return (
     <div>
       <select
-        className=' p-2 text-gray-500 bg-gray-50 focus:outline-none h-10 rounded-md border-0 transition-all'
+        className=' p-2 text-gray-500 bg-transparent border border-gray-500 focus:outline-none h-10 rounded-md  transition-all'
         name='izaberi_kategoriju'
         id='izaberi-kategoriju'
         onChange={handleSelect}

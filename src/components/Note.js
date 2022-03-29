@@ -23,11 +23,11 @@ const Note = ({
   return (
     <div
       onClick={() => setIsActive(note.id)}
-      className='flex flex-col lg:w-fit w-screen max-w-screen-sm  items-start justify-start shadow-custom rounded-lg '
+      className=' note flex flex-col lg:w-fit w-screen max-w-screen-sm  items-start justify-start rounded-lg '
       // style={{ transform: isActive === note.id && 'scale(1.25)' }}
     >
       <header
-        className={`w-full h-18 m-0 px-2 bg-slate-600 flex justify-between items-center rounded-t-md`}
+        className={`w-full h-18 m-0 px-2 bg-blue-900 flex justify-between items-center rounded-t-md`}
         style={
           {
             // backgroundColor: `${colorsArr[idx].hexString}`,
@@ -52,19 +52,19 @@ const Note = ({
           <FaCopy
             title='copy to clipboard'
             className={`${
-              isActive === note.id ? 'fill-gray-50' : 'fill-gray-400'
+              isActive === note.id ? 'fill-blue-500' : 'fill-gray-400'
             }`}
           />
           <FaTrashAlt
             className={`${
-              isActive === note.id ? 'fill-gray-50' : 'fill-gray-400'
+              isActive === note.id ? 'fill-red-500' : 'fill-gray-400'
             }`}
             title='delete'
             onClick={() => remove(note.id)}
           />
           <FaPenSquare
             className={`${
-              isActive === note.id ? 'fill-gray-50' : 'fill-gray-400'
+              isActive === note.id ? 'fill-green-500' : 'fill-gray-400'
             }`}
             title='edit'
             onClick={() => isEditing(note.id)}
@@ -75,9 +75,9 @@ const Note = ({
 
       <div
         dangerouslySetInnerHTML={createMarkup(marked(note.text))}
-        className={`p-4 border-2 border-t-0 border-b-0 border-slate-600 m-0 bg-slate-900 text-gray-50 w-full  min-w-[300px] min-h-[300px] `}
+        className={`p-4 border border-t-0 border-b-0 border-slate-600 m-0 bg-gray-900 text-gray-50 w-full  min-w-[300px] min-h-[300px] `}
       ></div>
-      <div className='flex gap-2 p-1 items-center bg-slate-900 w-full justify-center rounded-b-lg border-2 border-t-0 border-slate-600 flex-wrap'>
+      <div className='flex gap-2 p-1 items-center bg-gray-900 w-full justify-center rounded-b-lg border border-t-0 border-slate-600 flex-wrap'>
         {note &&
           note.tags &&
           note.tags.split(',').map((tag, idx) => (
