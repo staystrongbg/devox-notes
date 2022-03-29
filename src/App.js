@@ -224,7 +224,7 @@ function App() {
   return (
     <>
       <div
-        className={` w-full min-h-screen bg-gray-900  bg-cover bg-fixed overflow-x-hidden flex flex-col justify-between items-stretch `}
+        className={` px-2 w-full min-h-screen bg-gray-900  bg-cover bg-fixed overflow-x-hidden flex flex-col justify-between items-stretch `}
         // style={{ backgroundImage: `url(${bg})`, backgroundPosition: 'center' }}
       >
         {obavestenje && <Obavestenje obavestenje={obavestenje} />}
