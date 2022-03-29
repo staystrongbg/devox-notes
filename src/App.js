@@ -157,7 +157,7 @@ function App() {
         note.text.toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
-    console.log(searchTerm);
+
   }, [searchTerm]);
   // const filterNotes = () => {
   //   if (searchTerm !== '') {
