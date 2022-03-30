@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inter:wght@400;700&family=Roboto+Mono&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -74,7 +74,7 @@ button:disabled {
 
 .main-title {
   /* color: rgb(30 58 138); */
-  font-family: 'Roboto Mono';
+  font-family: 'Amatic SC';
   font-weight: 700;
   /* text-shadow: 2px 2px 4px #d3e4f5, 2px 2px 2px #e3d4e5; */
 }
