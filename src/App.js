@@ -20,6 +20,8 @@ import Note from './components/Note';
 import AddNote from './components/AddNote';
 import EditNote from './components/EditNote';
 import TagList from './components/TagList';
+import { FaArrowUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 //IDEJA
 //  MOGUCNOST DA SE IZABERE POZADINA IMEDJU NEKOLIOKO SLIKA I BOJA
@@ -221,8 +223,16 @@ function App() {
       <div
         className={`  w-full min-h-screen bg-gray-900 flex flex-col justify-between items-stretch `}
       >
+        {isScrolled && (
+          <div className='fixed bottom-4 right-2 rounded-full text-2xl animate-bounce bg-orange-500 p-2'>
+            <a href='#top'>
+              <FaArrowUp />
+            </a>
+          </div>
+        )}
+
         {obavestenje && <Obavestenje obavestenje={obavestenje} />}
-        <Topbar setIsAuth={setIsAuth} user={user} />
+        <Topbar setIsAuth={setIsAuth} user={user} id='top' />
         {/* header */}
         <Header
           isScrolled={isScrolled}
