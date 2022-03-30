@@ -9,32 +9,32 @@ const AddNote = ({
 }) => {
   return (
     <div className='note w-fit h-fit  fixed top-2/4 left-2/4 -translate-y-1/2 -translate-x-1/2 flex flex-col'>
-      <header className='h-18 bg-blue-500 w-full rounded-t-md px-4 py-1 text-gray-50 flex justify-between items-center'>
-        add new note
-        <span className='flex items-center justify-center gap-6'>
+      <header className='h-18 bg-gray-700 w-full rounded-t-md px-4 py-1 text-gray-50 flex justify-between items-center'>
+        <div className='w-full flex items-center justify-between'>
           <button
-            className='w-16 bg-blue-900 rounded-md'
+            className='w-fit px-4 py-2 text-gray-50 border-0 rounded-md bg-gray-800'
             onClick={addNoteToFirebase}
             title='Add note'
             disabled={!note || false}
           >
-            done
+            add new note
           </button>
+
           <FaTimesCircle
-            className='cursor-pointer'
+            className='cursor-pointer text-2xl'
             onClick={() => setIsAddNote(false)}
           />
-        </span>
+        </div>
       </header>
       <textarea
-        className=' p-2 border bg-gray-50 focus:ring-2 focus:ring-indigo-300 focus:ring-opacity-50 focus:outline-none  min-w-[400px] h-[400px] shadow-xl'
+        className=' p-2 bg-gray-800 border-2 border-b-0 border-gray-700 outline-none text-gray-50   w-96 h-80 shadow-custom'
         placeholder='write markdown...'
         onChange={(e) => handleChange(e)}
       ></textarea>
       <input
         type='text'
         placeholder='tags(html, css, react, js, next)...'
-        className='outline-none p-1'
+        className='outline-none p-1 bg-gray-800 border-2 border-gray-700 text-gray-50'
         onChange={(e) => setTags(e.target.value)}
         required
       />
