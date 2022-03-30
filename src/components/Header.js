@@ -11,7 +11,13 @@ const Header = ({
   return (
     <header className=' lg:flex lg:justify-around lg:items-start lg:flex-row  flex-col items-center justify-center p-4 mt-20'>
       <div className='flex flex-col items-center justify-center lg:justify-end lg:items-end gap-2 '>
-        <h1 className='main-title text-6xl text-red-700 '>devox notes</h1>
+        <h1
+          className={`main-title text-6xl text-red-700 transition-all ${
+            isScrolled ? 'fixed top-2 left-2 z-50 text-4xl ' : ''
+          } `}
+        >
+          devox notes
+        </h1>
         <button
           title='Add new note'
           disabled={!user && true}

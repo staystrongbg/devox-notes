@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,9 +9,9 @@ body {
 }
 
 code {
-  font-family: 'Share Tech Mono';
-  color: #87819e;
-  word-break: break-all;
+  font-family: 'Roboto Mono';
+  /* color: #87819e; */
+  color: greenyellow;
   width: 100%;
   display: block;
   white-space: break-spaces;
@@ -25,6 +25,8 @@ li {
 @media (min-width: 336px) {
   code {
     font-size: 11px;
+    padding: 5px 10px;
+    margin: 5px 0;
   }
 }
 
@@ -32,7 +34,6 @@ li {
   code {
     font-size: 12px;
   }
-  md: text-base text-sm;
 }
 
 @media (min-width: 1136px) {
@@ -61,7 +62,6 @@ h1,
 h2,
 h3 {
   color: #ae81ff;
-  background-color: #121212;
   text-align: left;
   display: inline-flex;
   padding: 5px 10px;
@@ -74,21 +74,21 @@ button:disabled {
 
 .main-title {
   /* color: rgb(30 58 138); */
-  font-family: 'Share Tech Mono';
-
+  font-family: 'Roboto Mono';
+  font-weight: 700;
   /* text-shadow: 2px 2px 4px #d3e4f5, 2px 2px 2px #e3d4e5; */
 }
 
 .tags {
-  font-family: 'Share Tech Mono';
+  font-family: 'Roboto Mono';
   padding: 40px;
   border-bottom: 1px dashed #87819e;
 }
 
 .tags-in-note {
-  font-family: 'Share Tech Mono';
+  font-family: 'Roboto Mono';
 }
 
 .search-input {
-  font-family: 'Share Tech Mono';
+  font-family: 'Roboto Mono';
 }

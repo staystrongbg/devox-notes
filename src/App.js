@@ -202,19 +202,14 @@ function App() {
     }
   };
 
-  const images = [
-    './pexels-fwstudio-172277.jpg',
-    './programiranje.jpg',
-    './pexels-negative-space-34153.jpg',
-    'gnome.jpg',
-    'stepin.jpg',
-    '',
-  ];
+  const background = [];
 
-  const [bg, setBg] = useState(images[0]);
+  const [bg, setBg] = useState(background[0]);
 
   useEffect(() => {
     window.addEventListener('scroll', scrolled);
+
+    return () => window.removeEventListener('scroll', scrolled);
   }, []);
 
   useEffect(() => {
@@ -275,7 +270,6 @@ function App() {
               setIsAddNote={setIsAddNote}
               note={note}
               handleChange={handleChange}
-              // handleSearch={handleSearch}
               setTags={setTags}
             />
           )}
