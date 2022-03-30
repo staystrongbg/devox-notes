@@ -195,7 +195,7 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const scrolled = () => {
-    if (window.pageYOffset > 0) {
+    if (window.pageYOffset > 100) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
