@@ -12,12 +12,12 @@ const AddNote = ({
       <header className='h-18 bg-gray-700 w-full rounded-t-md px-4 py-1 text-gray-50 flex justify-between items-center'>
         <div className='w-full flex items-center justify-between'>
           <button
-            className='w-fit px-4 py-2 text-gray-50 border-0 rounded-md bg-gray-800'
+            className='w-fit px-4 py-2 text-gray-50 border-0 rounded-md bg-gray-800 uppercase'
             onClick={addNoteToFirebase}
             title='Add note'
             disabled={!note || false}
           >
-            add new note
+            add note
           </button>
 
           <FaTimesCircle

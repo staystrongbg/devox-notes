@@ -11,7 +11,7 @@ const EditNote = ({
     <div className='note w-fit h-fit  fixed top-2/4 left-2/4 -translate-y-1/2 -translate-x-1/2 '>
       <header className='h-18 bg-gray-700 w-full rounded-t-md px-4 py-1 text-gray-50 flex justify-between items-center'>
         <button
-          className='w-fit px-4 py-2 text-gray-50 border-0 rounded-md bg-gray-800'
+          className='w-fit px-4 py-2 text-gray-50 border-0 rounded-md bg-gray-800 uppercase'
           onClick={updateNote}
         >
           Update note

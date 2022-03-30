@@ -11,7 +11,7 @@ body {
 code {
   font-family: 'Roboto Mono';
   /* color: #87819e; */
-  color: greenyellow;
+  color: #3bb273;
   width: 100%;
   display: block;
   white-space: break-spaces;
@@ -61,10 +61,19 @@ li {
 h1,
 h2,
 h3 {
-  color: #ae81ff;
   text-align: left;
-  display: inline-flex;
   padding: 5px 10px;
+}
+
+h1 {
+  color: #ae81ff;
+}
+
+h2 {
+  color: blue;
+}
+h3 {
+  color: cadetblue;
 }
 
 button:disabled {
