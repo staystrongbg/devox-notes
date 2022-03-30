@@ -12,7 +12,7 @@ const Nouser = () => {
 
       <ReactMarkdown
         children='## Markdown notes by devox. 
-                Please sign in with you Google account to start...'
+                Please sign in with your Google account to start...'
         className={`p-4 border-2 border-t-0 border-slate-600 m-0 bg-slate-900 text-gray-400  min-w-[300px] min-h-[300px] rounded-b-lg`}
       />
     </div>
