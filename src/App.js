@@ -224,7 +224,7 @@ function App() {
         className={`  w-full min-h-screen bg-gray-900 flex flex-col justify-between items-stretch `}
       >
         {isScrolled && (
-          <div className='fixed bottom-4 right-2 rounded-full text-2xl animate-bounce bg-orange-500 p-2'>
+          <div className='fixed bottom-4 right-2 rounded-full text-2xl animate-bounce bg-orange-500 p-2 z-50'>
             <a href='#top'>
               <FaArrowUp />
             </a>
