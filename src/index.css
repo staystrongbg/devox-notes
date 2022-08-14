@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inter:wght@400;700&family=Roboto+Mono&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter';
+}
+
+code {
+  font-family: 'Roboto Mono';
+  /* color: #87819e; */
+  color: #3bb273;
+  width: 100%;
+  display: block;
+  white-space: break-spaces;
+}
+
+p,
+li {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 336px) {
+  code {
+    font-size: 11px;
+    padding: 5px 10px;
+    margin: 5px 0;
+  }
+}
+
+@media (min-width: 536px) {
+  code {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1136px) {
+  p,
+  li {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 1.75em;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  code {
+    font-size: 16px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  text-align: left;
+  padding: 5px 10px;
+}
+
+h1 {
+  color: #ae81ff;
+}
+
+h2 {
+  color: blue;
+}
+h3 {
+  color: cadetblue;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  color: #888;
+}
+
+.main-title {
+  /* color: rgb(30 58 138); */
+  font-family: 'Amatic SC';
+  font-weight: 700;
+  /* text-shadow: 2px 2px 4px #d3e4f5, 2px 2px 2px #e3d4e5; */
+}
+
+.tags {
+  font-family: 'Roboto Mono';
+  padding: 40px;
+  border-bottom: 1px dashed #87819e;
+}
+
+.tags-in-note {
+  font-family: 'Roboto Mono';
+}
+
+.search-input {
+  font-family: 'Roboto Mono';
+}
